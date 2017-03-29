@@ -6,22 +6,22 @@
 
 </head>
 <body ng-app="Demo">
-<div ng-controller="countryController">
-    {{name}}
-    <div ng-controller="stateController">
-        {{name}}
-        <div ng-controller="cityController">
-            {{name}}
+<div ng-controller="countryController as countryCtrl">
+    {{countryCtrl.name}}
+    <div ng-controller="stateController as stateCtrl">
+        {{stateCtrl.name}}
+        <div ng-controller="cityController as cityCtrl">
+            {{cityCtrl.name}}
         </div>
     </div>
 </div>
 <br>
-<div ng-controller="countryController">
-    {{name}}
-    <div ng-controller="stateController">
-        {{$parent.name}} - {{name}}
-        <div ng-controller="cityController">
-            {{$parent.$parent.name}} - {{$parent.name}} - {{name}}
+<div ng-controller="countryController as countryCtrl">
+    {{countryCtrl.name}}
+    <div ng-controller="stateController as stateCtrl">
+        {{countryCtrl.name}} - {{stateCtrl.name}}
+        <div ng-controller="cityController as cityCtrl">
+            {{countryCtrl.name}} - {{stateCtrl.name}} - {{cityCtrl.name}}
         </div>
     </div>
 </div>
