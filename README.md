@@ -166,7 +166,7 @@ Let's set both the width and height of a div to 100px, as well as set a backgrou
 
 ![Dimensions](https://api.sololearn.com/DownloadFile?id=3120)
 
- The following example demonstrates how the methods work:
+The following example demonstrates how the methods work:
  
 HTML:
  
@@ -174,7 +174,7 @@ HTML:
     $("div").width(100);
     $("div").height(100);   
     
----
+-
 
 CSS:
  
@@ -188,7 +188,7 @@ CSS:
            color: white;
          }
             
-----
+-
 JS:
 
     $(function() {
