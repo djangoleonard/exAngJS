@@ -16,7 +16,7 @@
 
 ### Manipulating CSS
 
-####addClass() 
+#### addClass() 
 
 jQuery has several methods for CSS manipulation.
 The addClass( ) method adds one or more classes to the selected elements.
