@@ -174,8 +174,7 @@ HTML:
     $("div").width(100);
     $("div").height(100);   
     
--
-
+---
 CSS:
  
     div {
@@ -188,7 +187,7 @@ CSS:
            color: white;
          }
             
--
+---
 JS:
 
     $(function() {
