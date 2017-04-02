@@ -1,14 +1,13 @@
-```
-<script>
-        $(function () {
-            var txt = $("<p></p>").text("Hi");
-            $("#demo").after(txt);
-            var a = $("<span> Baba</span>");
-            $("#txt").append(a);
-        });
-</script>`
 
-```
+    <script>
+            $(function () {
+                var txt = $("<p></p>").text("Hi");
+                $("#demo").after(txt);
+                var a = $("<span> Baba</span>");
+                $("#txt").append(a);
+            });
+    </script>
+
 
 # 3 - Manipulating CSS
 
@@ -24,43 +23,38 @@ For example:
 
 HTML: 
 
-```
-<div>Some text</div>
-```
+    <div>Some text</div>
+
 
 CSS: 
 
-```
-.header {
-  color: blue;
-  font-size:x-large;
-}
-```
+    .header {
+      color: blue;
+      font-size:x-large;
+    }
+
 
 JS:
 
-```
-$(function () {
-    $("div").addClass("header");
-});
-```
+    $(function () {
+        $("div").addClass("header");
+    });
+
 
 The above code assigns the div element the class "header".
 
->To specify multiple classes within the addClass() method, just separate them using spaces. For example, $("div").addClass("class1 class2 class3").
+> To specify multiple classes within the addClass() method, just separate them using spaces. For example, $("div").addClass("class1 class2 class3").
 
 #### removeClass()
 
 The removeClass() method removes one or more class names from the selected elements.
 For example:
 
-```
-$("div").removeClass("red");
-```
+    $("div").removeClass("red");
 
 The code above removes the class "red" from the div element.
 
->Again, multiple class names can be specified by separating them using spaces.
+> Again, multiple class names can be specified by separating them using spaces.
 
 #### toggleClass()
 
@@ -69,29 +63,25 @@ To demonstrate this in action, we will handle a button click event to toggle a c
 
 HTML:
  
-````
-<p>Some text</p>
-<button>Toggle Class</button>
-````
+    <p>Some text</p>
+    <button>Toggle Class</button>
 
 CSS:
 
-````
-.red { 
-  color:red; 
-  font-weight: bold;
-}
-````
+    .red { 
+      color:red; 
+      font-weight: bold;
+    }
+
 
 JS:
 
-````
-$(function() {
-  $("button").click(function() {
-    $("p").toggleClass("red");
-  });
-});
-````
+    $(function() {
+      $("button").click(function() {
+        $("p").toggleClass("red");
+      });
+    });
+
 
 >The code above toggles the class name "red" upon clicking the button.
 
@@ -102,27 +92,22 @@ For example:
 
 HTML:
 
-```
-<p>Some text</p>
-```
-
+    <p>Some text</p>
+    
 CSS:
 
-```
-p {
-  background-color:red;
-  color: white;
-}
-```
+    p {
+      background-color:red;
+      color: white;
+    }
 
 JS:
 
-```
-$(function() {
-  alert($("p").css("background-color"));
-  $("p").css("background-color", "blue");
-}); 
-```
+    $(function() {
+      alert($("p").css("background-color"));
+      $("p").css("background-color", "blue");
+    }); 
+
 
 >The code above alerts the background-color property of the paragraph and then sets it to blue.
 
@@ -130,17 +115,15 @@ $(function() {
 
 To set multiple CSS properties, the css() method uses JSON syntax, which is: 
 
-```
-css({"property":"value","property":"value",...});
-```
+
+    css({"property":"value","property":"value",...});
+
 
 As you can see, the syntax consists of "property":"value" pairs, which are comma separated and enclosed in curly brackets { }.
 
 For Example: 
 
-```
-$("p").css({"color": "red", "font-size": "200%"});
-```
+    $("p").css({"color": "red", "font-size": "200%"});
 
 This will set the color and font-size properties of the paragraph.
 
@@ -151,7 +134,6 @@ This will set the color and font-size properties of the paragraph.
 The width() and height() methods can be used to get and set the width and height of HTML elements.
 
 Let's set both the width and height of a div to 100px, as well as set a background color for it:
- 
 
     $("div").css("background-color", "red");
     $("div").width(100);
@@ -174,7 +156,7 @@ HTML:
     $("div").width(100);
     $("div").height(100);   
     
----
+
 CSS:
  
     div {
@@ -187,7 +169,6 @@ CSS:
            color: white;
          }
             
----
 JS:
 
     $(function() {
