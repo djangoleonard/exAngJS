@@ -49,7 +49,7 @@ The above code assigns the div element the class "header".
 
 >To specify multiple classes within the addClass() method, just separate them using spaces. For example, $("div").addClass("class1 class2 class3").
 
-####removeClass()
+#### removeClass()
 
 The removeClass() method removes one or more class names from the selected elements.
 For example:
@@ -62,7 +62,7 @@ The code above removes the class "red" from the div element.
 
 >Again, multiple class names can be specified by separating them using spaces.
 
-####toggleClass()
+#### toggleClass()
 
 The toggleClass() method toggles between adding/removing classes from the selected elements, meaning that if the specified class exists for the element, it is removed, and if it does not exist, it is added.
 To demonstrate this in action, we will handle a button click event to toggle a class. We will learn more about events and their syntax in the coming modules.
@@ -126,7 +126,7 @@ $(function() {
 
 >The code above alerts the background-color property of the paragraph and then sets it to blue.
 
-##Multiple Properties
+## Multiple Properties
 
 To set multiple CSS properties, the css() method uses JSON syntax, which is: 
 
@@ -152,11 +152,10 @@ The width() and height() methods can be used to get and set the width and height
 
 Let's set both the width and height of a div to 100px, as well as set a background color for it:
  
-```
- $("div").css("background-color", "red");
- $("div").width(100);
- $("div").height(100);
-```
+
+    $("div").css("background-color", "red");
+    $("div").width(100);
+    $("div").height(100);
  
  The width() and height() methods get and set the dimensions without the padding, borders and margins.
  The innerWidth() and innerHeight() methods also include the padding.
@@ -167,24 +166,40 @@ Let's set both the width and height of a div to 100px, as well as set a backgrou
 
 ![Dimensions](https://api.sololearn.com/DownloadFile?id=3120)
 
-  
  The following example demonstrates how the methods work:
- HTML:
  
- ```
-  $("div").css("background-color", "red");
-  $("div").width(100);
-  $("div").height(100);
- ```
+HTML:
  
- ```
-  $("div").css("background-color", "red");
-  $("div").width(100);
-  $("div").height(100);
- ```
+    $("div").css("background-color", "red");
+    $("div").width(100);
+    $("div").height(100);   
+    
+---
+
+CSS:
  
- ```
-  $("div").css("background-color", "red");
-  $("div").width(100);
-  $("div").height(100);
- ```
+    div {
+           width: 300px;
+           height: 100px;
+           padding: 10px;
+           margin: 20px;
+           border: 3px solid blue;
+           background-color: red;
+           color: white;
+         }
+            
+----
+JS:
+
+    $(function() {
+      var txt = "";
+      txt += "width: " + $("div").width() + " ";
+      txt += "height: " + $("div").height() + "<br/>";
+      txt += "innerWidth: " + $("div").innerWidth() + "  ";
+      txt += "innerHeight: " + $("div").innerHeight() + "<br/>";
+      txt += "outerWidth: " + $("div").outerWidth() + "  ";
+      txt += "outerHeight: " + $("div").outerHeight();
+        
+      $("div").html(txt);
+    });
+    
